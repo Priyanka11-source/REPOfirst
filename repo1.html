@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First GitHub Repository: A Visual Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100" style="background-color: #f0f4f8;">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black mb-4" style="color: #073B4C;">Your First GitHub Repository</h1>
+            <p class="text-xl md:text-2xl font-light" style="color: #118AB2;">A Visual Guide to Version Control</p>
+        </header>
+
+        <main>
+            <section class="text-center bg-white rounded-lg shadow-md p-8 mb-12">
+                <p class="text-lg uppercase font-semibold" style="color: #118AB2;">Join a Global Community</p>
+                <div class="text-7xl md:text-9xl font-black my-4" style="color: #FF6B6B;">100M+</div>
+                <p class="text-xl font-medium" style="color: #073B4C;">Developers worldwide use GitHub to build software, share code, and collaborate on projects.</p>
+            </section>
+            
+            <section class="mb-12">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold" style="color: #073B4C;">What is a Repository & Why Use One?</h2>
+                    <p class="mt-2 text-lg" style="color: #118AB2;">Think of a repository (or "repo") as a project's folder. But it's supercharged with a system called Git that tracks every single change, making it a powerful tool for developers.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="text-5xl mb-4" style="color: #FFD166;">🤝</div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #073B4C;">Seamless Collaboration</h3>
+                        <p class="text-gray-600">Work with teammates on the same project without overriding each other's work. GitHub is the central hub for your team's code.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="text-5xl mb-4" style="color: #06D6A0;">📖</div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #073B4C;">Complete History</h3>
+                        <p class="text-gray-600">Git saves a snapshot of your files every time you "commit." You can go back to any previous version of your project, anytime.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="text-5xl mb-4" style="color: #FF6B6B;">⛑️</div>
+                        <h3 class="text-xl font-bold mb-2" style="color: #073B4C;">A Safety Net</h3>
+                        <p class="text-gray-600">Made a mistake? No problem. Version control allows you to revert changes and recover from errors without losing your work.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold" style="color: #073B4C;">Anatomy of a Healthy Repository</h2>
+                    <p class="mt-2 text-lg" style="color: #118AB2;">A great repository is more than just code. It includes key files that help others understand and contribute to your project. Here’s a look at how often these essential files appear in projects.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="chart-container h-96 md:h-[450px]">
+                        <canvas id="repoAnatomyChart"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-12">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold" style="color: #073B4C;">The Fundamental Workflow</h2>
+                    <p class="mt-2 text-lg" style="color: #118AB2;">Getting your code onto GitHub involves a few core steps. This cycle is what you'll repeat every time you want to save and share your progress.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="rounded-full flex items-center justify-center text-white text-2xl font-bold w-24 h-24 mb-2" style="background-color: #118AB2;">1</div>
+                            <h3 class="text-lg font-semibold" style="color: #073B4C;">Create on GitHub</h3>
+                            <p class="text-gray-600 max-w-xs">Start by creating a new, empty repository on the GitHub website.</p>
+                        </div>
+                        <div class="text-5xl font-thin hidden md:block" style="color: #FFD166;">→</div>
+                        <div class="text-5xl font-thin block md:hidden" style="color: #FFD166;">↓</div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="rounded-full flex items-center justify-center text-white text-2xl font-bold w-24 h-24 mb-2" style="background-color: #06D6A0;">2</div>
+                            <h3 class="text-lg font-semibold" style="color: #073B4C;">Clone to Local</h3>
+                            <p class="text-gray-600 max-w-xs">Download a copy of the repository to your computer using `git clone`.</p>
+                        </div>
+                        <div class="text-5xl font-thin hidden md:block" style="color: #FFD166;">→</div>
+                        <div class="text-5xl font-thin block md:hidden" style="color: #FFD166;">↓</div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="rounded-full flex items-center justify-center text-white text-2xl font-bold w-24 h-24 mb-2" style="background-color: #FFD166;">3</div>
+                            <h3 class="text-lg font-semibold" style="color: #073B4C;">Edit & Commit</h3>
+                            <p class="text-gray-600 max-w-xs">Make changes to your project files, then save them with `git commit`.</p>
+                        </div>
+                        <div class="text-5xl font-thin hidden md:block" style="color: #FFD166;">→</div>
+                        <div class="text-5xl font-thin block md:hidden" style="color: #FFD166;">↓</div>
+                         <div class="flex flex-col items-center text-center">
+                            <div class="rounded-full flex items-center justify-center text-white text-2xl font-bold w-24 h-24 mb-2" style="background-color: #FF6B6B;">4</div>
+                            <h3 class="text-lg font-semibold" style="color: #073B4C;">Push to GitHub</h3>
+                            <p class="text-gray-600 max-w-xs">Upload your committed changes back to GitHub with `git push`.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-12">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold" style="color: #073B4C;">GitHub's Explosive Growth</h2>
+                    <p class="mt-2 text-lg" style="color: #118AB2;">The number of repositories on GitHub has grown exponentially, highlighting its central role in modern software development. Your new repo is part of this massive ecosystem.</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="chart-container h-80 md:h-96">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold" style="color: #073B4C;">Your Journey Starts Now</h2>
+                    <p class="mt-2 text-lg mb-8" style="color: #118AB2;">You've created your first repository! Here are the next concepts to explore as you become a Git and GitHub expert.</p>
+                    <div class="bg-white rounded-lg shadow-md p-8 inline-block text-left">
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <span class="text-2xl mr-4" style="color: #06D6A0;">›</span>
+                                <span class="text-lg font-medium" style="color: #073B4C;">Branching: Work on new features in isolation.</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-2xl mr-4" style="color: #06D6A0;">›</span>
+                                <span class="text-lg font-medium" style="color: #073B4C;">Merging: Combine changes from different branches.</span>
+                            </li>
+                             <li class="flex items-center">
+                                <span class="text-2xl mr-4" style="color: #06D6A0;">›</span>
+                                <span class="text-lg font-medium" style="color: #073B4C;">Pull Requests: Propose changes and get feedback before merging.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-12 pt-8 border-t">
+            <p class="text-gray-500">Infographic created on October 4, 2025.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxLength = 16) => {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const vibrantPalette = {
+            red: '#FF6B6B',
+            yellow: '#FFD166',
+            green: '#06D6A0',
+            blue: '#118AB2',
+            darkBlue: '#073B4C'
+        };
+
+        const repoAnatomyCtx = document.getElementById('repoAnatomyChart').getContext('2d');
+        const repoAnatomyChart = new Chart(repoAnatomyCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['README File (Explains the project)', '.gitignore File (Ignores temp files)', 'LICENSE File (Defines usage rights)'],
+                datasets: [{
+                    label: 'Presence in Repositories',
+                    data: [85, 65, 55],
+                    backgroundColor: [
+                        vibrantPalette.blue,
+                        vibrantPalette.green,
+                        vibrantPalette.yellow
+                    ],
+                    borderColor: '#fff',
+                    borderWidth: 4,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            font: {
+                                size: 14,
+                                family: "'Inter', sans-serif"
+                            },
+                            color: vibrantPalette.darkBlue
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        },
+                        bodyFont: {
+                            size: 14,
+                            family: "'Inter', sans-serif"
+                        },
+                        titleFont: {
+                            size: 16,
+                            family: "'Inter', sans-serif"
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+        
+        const growthCtx = document.getElementById('growthChart').getContext('2d');
+        const growthChart = new Chart(growthCtx, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+                datasets: [{
+                    label: 'Total Repositories (in Millions)',
+                    data: [190, 235, 280, 330, 375, 420],
+                    backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                    borderColor: vibrantPalette.red,
+                    borderWidth: 3,
+                    pointBackgroundColor: vibrantPalette.red,
+                    pointRadius: 5,
+                    pointHoverRadius: 8,
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        grid: {
+                            color: '#e0e0e0'
+                        },
+                        ticks: {
+                           color: vibrantPalette.darkBlue,
+                           font: { size: 12 }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                           color: vibrantPalette.darkBlue,
+                           font: { size: 12 }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        },
+                        backgroundColor: vibrantPalette.darkBlue,
+                        titleFont: { size: 16 },
+                        bodyFont: { size: 14 },
+                        padding: 12,
+                        cornerRadius: 4,
+                        displayColors: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
